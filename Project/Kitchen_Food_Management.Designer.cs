@@ -32,17 +32,17 @@
             this.label10 = new System.Windows.Forms.Label();
             this.txtfoodid = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtfoodname = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
-            this.txtamount = new System.Windows.Forms.TextBox();
+            this.txtquantity = new System.Windows.Forms.TextBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtkname = new System.Windows.Forms.TextBox();
+            this.txtkid = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
+            this.cmbfoodname = new System.Windows.Forms.ComboBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.SuspendLayout();
@@ -77,15 +77,6 @@
             this.label1.TabIndex = 40;
             this.label1.Text = "Food Name :";
             // 
-            // txtfoodname
-            // 
-            this.txtfoodname.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.txtfoodname.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.txtfoodname.Location = new System.Drawing.Point(573, 118);
-            this.txtfoodname.Name = "txtfoodname";
-            this.txtfoodname.Size = new System.Drawing.Size(153, 20);
-            this.txtfoodname.TabIndex = 42;
-            // 
             // label21
             // 
             this.label21.AutoSize = true;
@@ -103,19 +94,21 @@
             this.button7.ForeColor = System.Drawing.Color.White;
             this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
             this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.Location = new System.Drawing.Point(553, 375);
+            this.button7.Location = new System.Drawing.Point(533, 370);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(109, 42);
             this.button7.TabIndex = 34;
             this.button7.Text = "Done";
             this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
-            // txtamount
+            // txtquantity
             // 
-            this.txtamount.Location = new System.Drawing.Point(573, 212);
-            this.txtamount.Name = "txtamount";
-            this.txtamount.Size = new System.Drawing.Size(151, 20);
-            this.txtamount.TabIndex = 31;
+            this.txtquantity.Location = new System.Drawing.Point(573, 212);
+            this.txtquantity.Name = "txtquantity";
+            this.txtquantity.Size = new System.Drawing.Size(151, 20);
+            this.txtquantity.TabIndex = 31;
+            this.txtquantity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtquantity_KeyPress);
             // 
             // tabControl1
             // 
@@ -130,14 +123,14 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.LemonChiffon;
-            this.tabPage1.Controls.Add(this.txtfoodname);
-            this.tabPage1.Controls.Add(this.label11);
-            this.tabPage1.Controls.Add(this.label8);
+            this.tabPage1.Controls.Add(this.cmbfoodname);
+            this.tabPage1.Controls.Add(this.label3);
+            this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.label21);
             this.tabPage1.Controls.Add(this.button7);
-            this.tabPage1.Controls.Add(this.textBox6);
-            this.tabPage1.Controls.Add(this.textBox5);
-            this.tabPage1.Controls.Add(this.txtamount);
+            this.tabPage1.Controls.Add(this.txtkname);
+            this.tabPage1.Controls.Add(this.txtkid);
+            this.tabPage1.Controls.Add(this.txtquantity);
             this.tabPage1.Controls.Add(this.txtfoodid);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.label9);
@@ -149,6 +142,42 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Add Food ";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(442, 299);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(116, 20);
+            this.label3.TabIndex = 41;
+            this.label3.Text = "Kitchen Name :";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(442, 254);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(91, 20);
+            this.label2.TabIndex = 41;
+            this.label2.Text = "Kitchen ID :";
+            // 
+            // txtkname
+            // 
+            this.txtkname.Location = new System.Drawing.Point(573, 301);
+            this.txtkname.Name = "txtkname";
+            this.txtkname.ReadOnly = true;
+            this.txtkname.Size = new System.Drawing.Size(151, 20);
+            this.txtkname.TabIndex = 31;
+            // 
+            // txtkid
+            // 
+            this.txtkid.Location = new System.Drawing.Point(573, 256);
+            this.txtkid.Name = "txtkid";
+            this.txtkid.ReadOnly = true;
+            this.txtkid.Size = new System.Drawing.Size(151, 20);
+            this.txtkid.TabIndex = 31;
+            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -159,39 +188,14 @@
             this.label9.TabIndex = 40;
             this.label9.Text = "Food ID :";
             // 
-            // label8
+            // cmbfoodname
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(442, 254);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(52, 20);
-            this.label8.TabIndex = 41;
-            this.label8.Text = "Date :";
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(573, 256);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(151, 20);
-            this.textBox5.TabIndex = 31;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(573, 304);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(151, 20);
-            this.textBox6.TabIndex = 31;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(442, 302);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(51, 20);
-            this.label11.TabIndex = 41;
-            this.label11.Text = "Time :";
+            this.cmbfoodname.FormattingEnabled = true;
+            this.cmbfoodname.Location = new System.Drawing.Point(573, 114);
+            this.cmbfoodname.Name = "cmbfoodname";
+            this.cmbfoodname.Size = new System.Drawing.Size(151, 21);
+            this.cmbfoodname.TabIndex = 42;
+            this.cmbfoodname.SelectedValueChanged += new System.EventHandler(this.cmbfoodname_SelectedValueChanged);
             // 
             // Kitchen_Food_Management
             // 
@@ -215,16 +219,16 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtfoodid;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtfoodname;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.TextBox txtamount;
+        private System.Windows.Forms.TextBox txtquantity;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtkname;
+        private System.Windows.Forms.TextBox txtkid;
+        private System.Windows.Forms.ComboBox cmbfoodname;
     }
 }

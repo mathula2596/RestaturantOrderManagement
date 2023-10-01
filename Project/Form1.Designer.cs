@@ -57,6 +57,7 @@
             this.button1.TabIndex = 14;
             this.button1.Text = "Help";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnlogin
             // 
@@ -71,6 +72,7 @@
             this.btnlogin.TabIndex = 13;
             this.btnlogin.Text = "Login";
             this.btnlogin.UseVisualStyleBackColor = false;
+            this.btnlogin.Click += new System.EventHandler(this.btnlogin_Click);
             // 
             // txtpass
             // 
@@ -81,6 +83,7 @@
             this.txtpass.Size = new System.Drawing.Size(177, 30);
             this.txtpass.TabIndex = 11;
             this.txtpass.Text = "Password";
+            this.txtpass.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtpass_MouseClick);
             // 
             // txtuser
             // 
@@ -90,6 +93,8 @@
             this.txtuser.Size = new System.Drawing.Size(177, 30);
             this.txtuser.TabIndex = 10;
             this.txtuser.Text = "Username";
+            this.txtuser.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtuser_MouseClick);
+            this.txtuser.TextChanged += new System.EventHandler(this.txtuser_TextChanged);
             // 
             // label2
             // 

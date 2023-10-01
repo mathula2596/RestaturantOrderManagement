@@ -10,24 +10,15 @@ using System.Windows.Forms;
 
 namespace Project
 {
-    public partial class Reset_Password : Form
+    public partial class Cashier : Form
     {
-        public Reset_Password()
+        public Cashier(String username)
         {
             InitializeComponent();
+            label5.Text = username;
         }
 
-        private void txtuser_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Reset_Password_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
+        private void Cashier_Load(object sender, EventArgs e)
         {
 
         }

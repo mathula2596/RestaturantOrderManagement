@@ -12,9 +12,10 @@ namespace Project
 {
     public partial class Admin : Form
     {
-        public Admin()
+        public Admin(String username)
         {
             InitializeComponent();
+            label5.Text = username;
         }
 
         private void Admin_Shown(object sender, EventArgs e)

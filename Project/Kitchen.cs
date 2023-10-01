@@ -12,9 +12,13 @@ namespace Project
 {
     public partial class Kitchen : Form
     {
-        public Kitchen()
+        string firstname;
+        
+        public Kitchen(String username, String name)
         {
             InitializeComponent();
+            label5.Text = username;
+            firstname = name;
         }
 
         private void Kitchen_Shown(object sender, EventArgs e)
@@ -38,7 +42,7 @@ namespace Project
 
         private void btnfood_Click(object sender, EventArgs e)
         {
-            Kitchen_Food_Management myform = new Kitchen_Food_Management();
+            Kitchen_Food_Management myform = new Kitchen_Food_Management(label5.Text,firstname);
             //	Student_Registration myform1 = new Student_Registration();
             myform.FormBorderStyle = FormBorderStyle.None;
             myform.TopLevel = false;
@@ -49,13 +53,8 @@ namespace Project
             myform.Show();
             //button1.BackColor = Color.DarkSlateBlue;
             btnfood.BackColor = Color.SaddleBrown;
-            btnsales.BackColor = Color.SaddleBrown;
-            btnreport.BackColor = Color.SaddleBrown;
-            btnadmin.BackColor = Color.SaddleBrown;
-            btncashier.BackColor = Color.SaddleBrown;
-            btnkitchen.BackColor = Color.SaddleBrown;
-            btnlogout.BackColor = Color.SaddleBrown;
-            btnstock.BackColor = Color.SaddleBrown;
+           
+           
 
             btnfood.BackColor = Color.SandyBrown;
         }

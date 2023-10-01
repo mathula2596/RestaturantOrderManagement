@@ -46,8 +46,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label6 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -178,7 +178,7 @@
             this.btnreport.Name = "btnreport";
             this.btnreport.Size = new System.Drawing.Size(140, 43);
             this.btnreport.TabIndex = 6;
-            this.btnreport.Text = "     Report";
+            this.btnreport.Text = "     Help";
             this.btnreport.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnreport.UseVisualStyleBackColor = false;
             this.btnreport.Click += new System.EventHandler(this.button7_Click);
